@@ -143,16 +143,15 @@ body {
       -ms-flex-align: start;
           align-items: flex-start;
   gap: 1rem;
-  padding-top: 8rem;
+  padding-top: 128px;
 }
 @media (min-width: 2540px) {
   .app-body {
-    padding-top: 18rem;
+    padding-top: 288px;
   }
 }
 @media (max-width: 1024px) {
   .app-body {
-    padding-top: 8rem;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -160,11 +159,6 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-  }
-}
-@media (max-width: 768px) {
-  .app-body {
-    padding-top: 6rem;
   }
 }
 
