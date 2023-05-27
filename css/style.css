@@ -1,0 +1,329 @@
+@font-face {
+  font-family: STARWARS;
+  src: url("../fonts/STARWARS.eot?") format("eot"), url("../fonts/STARWARS.woff") format("woff"), url("../fonts/STARWARS.ttf") format("truetype"), url("../fonts/STARWARS.svg#STARWARS") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+  background-color: inherit;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+.ibg {
+  position: relative;
+}
+
+.ibg img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-image: url(../img/bfg.jpg);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  position: relative;
+  font-family: STARWARS, sans-serif;
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 81.25rem;
+  margin: 0 auto;
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+}
+
+.app-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 1rem;
+  padding-top: 12rem;
+}
+@media (max-width: 1125px) {
+  .app-body {
+    padding-top: 10rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+@media (max-width: 768px) {
+  .app-body {
+    padding-top: 10rem;
+  }
+}
+
+.game-section {
+  position: relative;
+}
+
+.btn-section {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 35%;
+          flex: 0 1 35%;
+  padding: 1rem;
+  background-color: rgba(37, 22, 81, 0.6);
+  border-radius: 0.625rem;
+  padding: 1.5rem;
+}
+.btn-section h2 {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: 0.25rem;
+  text-shadow: 0.125rem 0.125rem 0.125rem #190f37, 0 0.125rem 0.125rem #190f37, -0.125rem 0 0.125rem #190f37, 0 -0.125rem 0.125rem #190f37, 0.1875rem 0.1875rem 0.125rem #190f37, 0 0.1875rem 0.125rem #190f37, 0.1875rem 0 0.125rem #190f37, 0 -0.1875rem 0.125rem #190f37;
+  margin-bottom: 1rem;
+}
+@media (max-width: 1125px) {
+  .btn-section h2 {
+    text-align: center;
+  }
+}
+
+#buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 1.5rem;
+}
+@media (max-width: 1125px) {
+  #buttons {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+@media (max-width: 590px) {
+  #buttons {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+#buttons button {
+  border: 0.125rem solid #251651;
+  border-radius: 0.25rem;
+  color: #251651;
+  text-shadow: 0.125rem 0.125rem 0.125rem #a2bfd7, 0 0.125rem 0.125rem #a2bfd7, -0.125rem 0 0.125rem #a2bfd7, 0 -0.125rem 0.125rem #a2bfd7;
+  font-size: 1rem;
+  line-height: 3rem;
+  text-transform: uppercase;
+  background-color: #fff;
+  padding: 0 0.75rem 0 3.25rem;
+}
+#buttons button:hover {
+  background-image: url("../img/back.png");
+  background-repeat: no-repeat;
+  background-position: 0.25rem 0;
+  background-size: contain;
+}
+#buttons button.active {
+  background-color: #cce8ff;
+  background-image: url("../img/back.png");
+  background-repeat: no-repeat;
+  background-position: 0.25rem 0;
+  background-size: contain;
+}
+
+#cards {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  display: grid;
+  grid-template: repeat(4, auto)/repeat(4, auto);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #a2bfd7;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  border-radius: 0.625rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0.1875rem;
+  margin: 0 auto;
+}
+
+#cards li {
+  list-style: none;
+  background: #bedaf1;
+  height: 5rem;
+  width: 5rem;
+  border: 0.125rem solid #a2bfd7;
+  border-radius: 0.625rem;
+  background-image: url("../img/back.png");
+  background-repeat: no-repeat;
+  cursor: pointer;
+  background-size: 4.375rem auto;
+  background-position: center;
+  -webkit-transition: visibility 0.6s ease-in-out;
+  -o-transition: visibility 0.6s ease-in-out;
+  transition: visibility 0.6s ease-in-out;
+}
+
+#reset {
+  background: #fff;
+  border: 0.25rem solid #251651;
+  border-radius: 0.625rem;
+  height: 11.25rem;
+  width: 17.5rem;
+  padding: 2.25rem;
+  color: #251651;
+  position: absolute;
+  top: calc(50% - 1.625rem);
+  left: calc(50% - 8.75rem);
+  display: none;
+}
+
+#reset h2 {
+  font-size: 2.5rem;
+  margin: 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#reset button {
+  border: 0.125rem solid #251651;
+  color: #251651;
+  font-size: 1.5rem;
+  border-radius: 0.25rem;
+  display: block;
+  margin: 0.9375rem auto 0;
+  cursor: pointer;
+  padding: 0.5rem 0.9375rem 0.3125rem;
+  text-transform: uppercase;
+  background: #fff;
+  font-family: STARWARS, sans-serif;
+}
+
+#reset button:hover {
+  background: #251651;
+  color: #fff;
+}

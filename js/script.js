@@ -2,6 +2,9 @@ let cardsField = document.getElementById('cards');
 let resetBlock = document.getElementById('reset');
 let resetBtn = document.getElementById('reset-btn');
 let countCards = 16;
+let n = 8;
+let x;
+let y;
 let delCards = 0;
 let pause = false;
 
@@ -24,7 +27,7 @@ function shuffle(array) {
 }
 
 // Push images to array and double them
-for (let i = 1; i <= 8; i += 1) {
+for (let i = 1; i <= n; i += 1) {
 	images.push(i);
 	images.push(i);
 }
@@ -51,7 +54,7 @@ cardsField.onclick = function (event) {
 			// Get the image number
 			let img = images[card.id];
 			// Set the background image of the card
-			card.style.backgroundImage = `url(images/${img}.png)`;
+			card.style.backgroundImage = `url(../img/${img}.png)`;
 			// If two cards are selected
 			if (selCards.length == 2) {
 				pause = true;
@@ -68,7 +71,7 @@ cardsField.onclick = function (event) {
 function refreshCards() {
 	for (let i = 0; i < countCards; i++) {
 		cardsField.children[i].className = '';
-		cardsField.children[i].style.backgroundImage = 'url("images/back.png")'
+		cardsField.children[i].style.backgroundImage = 'url("../img/back.png")'
 	}
 	if (delCards == countCards) {
 		resetBlock.style.display = 'block';
