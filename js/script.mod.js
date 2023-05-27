@@ -133,7 +133,7 @@ cardsField.onclick = function (event) {
 			// Get the image number
 			let img = images[card.id];
 			// Set the background image of the card
-			card.style.backgroundImage = `url(../img/${img}.png)`;
+			card.style.backgroundImage = `url(img/${img}.png)`;
 			// If two cards are selected
 			if (selCards.length == 2) {
 				pause = true;
@@ -150,7 +150,7 @@ cardsField.onclick = function (event) {
 function refreshCards() {
 	for (let i = 0; i < countCards; i++) {
 		cardsField.children[i].className = '';
-		cardsField.children[i].style.backgroundImage = 'url("../img/back.png")'
+		cardsField.children[i].style.backgroundImage = 'url("img/back.png")'
 	}
 	if (delCards == countCards) {
 		resetBlock.style.display = 'block';
