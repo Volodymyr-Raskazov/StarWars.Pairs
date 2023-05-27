@@ -143,7 +143,7 @@ body {
       -ms-flex-align: start;
           align-items: flex-start;
   gap: 1rem;
-  padding-top: 128px;
+  padding-top: 110px;
 }
 @media (min-width: 2540px) {
   .app-body {
@@ -159,6 +159,7 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    gap: 0.5rem;
   }
 }
 
