@@ -45,9 +45,12 @@ body {
 	display: flex;
 	align-items: flex-start;
 	gap: 1rem;
-	padding-top: 10rem;
-	@media (max-width: 1125px) {
-		padding-top: 8;
+	padding-top: 8rem;
+	@media (min-width: 2540px) {
+		padding-top: 18rem;
+	}
+	@media (max-width: 1024px) {
+		padding-top: 8rem;
 		flex-direction: column;
 		align-items: center;
 	}
@@ -75,7 +78,7 @@ body {
 			0 -0.125rem 0.125rem #190f37, 0.1875rem 0.1875rem 0.125rem #190f37, 0 0.1875rem 0.125rem #190f37,
 			0.1875rem 0 0.125rem #190f37, 0 -0.1875rem 0.125rem #190f37;
 		margin-bottom: 1rem;
-		@media (max-width: 1125px) {
+		@media (max-width: 1024px) {
 			text-align: center;
 		}
 	}
