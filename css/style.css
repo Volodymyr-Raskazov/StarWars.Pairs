@@ -143,11 +143,11 @@ body {
       -ms-flex-align: start;
           align-items: flex-start;
   gap: 1rem;
-  padding-top: 12rem;
+  padding-top: 10rem;
 }
 @media (max-width: 1125px) {
   .app-body {
-    padding-top: 10rem;
+    padding-top: 8;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -159,7 +159,7 @@ body {
 }
 @media (max-width: 768px) {
   .app-body {
-    padding-top: 10rem;
+    padding-top: 6rem;
   }
 }
 
@@ -174,7 +174,6 @@ body {
   padding: 1rem;
   background-color: rgba(37, 22, 81, 0.6);
   border-radius: 0.625rem;
-  padding: 1.5rem;
 }
 .btn-section h2 {
   color: #fff;
@@ -205,8 +204,6 @@ body {
 }
 @media (max-width: 1125px) {
   #buttons {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -216,11 +213,16 @@ body {
             justify-content: space-between;
   }
 }
-@media (max-width: 590px) {
+@media (max-width: 470px) {
   #buttons {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 0.5rem;
   }
 }
 #buttons button {
@@ -229,10 +231,16 @@ body {
   color: #251651;
   text-shadow: 0.125rem 0.125rem 0.125rem #a2bfd7, 0 0.125rem 0.125rem #a2bfd7, -0.125rem 0 0.125rem #a2bfd7, 0 -0.125rem 0.125rem #a2bfd7;
   font-size: 1rem;
-  line-height: 3rem;
+  line-height: 2rem;
   text-transform: uppercase;
   background-color: #fff;
-  padding: 0 0.75rem 0 3.25rem;
+  padding: 0 0.75rem 0 2.5rem;
+}
+@media (max-width: 570px) {
+  #buttons button {
+    font-size: 0.75rem;
+    line-height: 1.5rem;
+  }
 }
 #buttons button:hover {
   background-image: url("../img/back.png");
@@ -280,9 +288,9 @@ body {
   border-radius: 0.625rem;
   background-image: url("../img/back.png");
   background-repeat: no-repeat;
-  cursor: pointer;
-  background-size: 4.375rem auto;
+  background-size: contain;
   background-position: center;
+  cursor: pointer;
   -webkit-transition: visibility 0.6s ease-in-out;
   -o-transition: visibility 0.6s ease-in-out;
   transition: visibility 0.6s ease-in-out;
@@ -297,7 +305,7 @@ body {
   padding: 2.25rem;
   color: #251651;
   position: absolute;
-  top: calc(50% - 1.625rem);
+  top: calc(50% - 5.625rem);
   left: calc(50% - 8.75rem);
   display: none;
 }

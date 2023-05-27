@@ -14,6 +14,29 @@ let y;
 let images = [];
 let selCards = [];
 
+function fillCards(n) {
+	// Push images to array and double them
+	for (let i = 1; i <= n; i += 1) {
+		images.push(i);
+		images.push(i);
+	}
+	// Shuffle images
+	shuffle(images);
+}
+
+function createCards() {
+	// Create list items for each card
+	for (let i = 0; i < countCards; i++) {
+		let li = document.createElement('li');
+		if (window.innerWidth <= 500) {
+			li.style.height = '3.5rem';
+			li.style.width = '3.5rem';
+		}
+		li.id = i;
+		cardsField.appendChild(li);
+	}
+}
+
 function setLvl(lvl) {
 	if (lvl == 1) {
 		lvl1.classList.add('active');
@@ -26,19 +49,9 @@ function setLvl(lvl) {
 		n = 8;
 		cardsField.style.gridTemplate = `repeat(${y}, auto) / repeat(${x}, auto)`;
 		images = [];
-		// Push images to array and double them
-		for (let i = 1; i <= n; i += 1) {
-			images.push(i);
-			images.push(i);
-		}
-		// Shuffle images
-		shuffle(images);
-		// Create list items for each card
-		for (let i = 0; i < countCards; i++) {
-			let li = document.createElement('li');
-			li.id = i;
-			cardsField.appendChild(li);
-		}
+		fillCards(n);
+		createCards();
+
 	} else if (lvl == 2) {
 		lvl1.classList.remove('active');
 		lvl2.classList.add('active');
@@ -50,19 +63,9 @@ function setLvl(lvl) {
 		n = 18
 		cardsField.style.gridTemplate = `repeat(${y}, auto) / repeat(${x}, auto)`;
 		images = [];
-		// Push images to array and double them
-		for (let i = 1; i <= n; i += 1) {
-			images.push(i);
-			images.push(i);
-		}
-		// Shuffle images
-		shuffle(images);
-		// Create list items for each card
-		for (let i = 0; i < countCards; i++) {
-			let li = document.createElement('li');
-			li.id = i;
-			cardsField.appendChild(li);
-		}
+		fillCards(n);
+		createCards();
+
 	} else if (lvl == 3) {
 		lvl1.classList.remove('active');
 		lvl2.classList.remove('active');
@@ -79,19 +82,8 @@ function setLvl(lvl) {
 		n = 27
 		cardsField.style.gridTemplate = `repeat(${y}, auto) / repeat(${x}, auto)`;
 		images = [];
-		// Push images to array and double them
-		for (let i = 1; i <= n; i += 1) {
-			images.push(i);
-			images.push(i);
-		}
-		// Shuffle images
-		shuffle(images);
-		// Create list items for each card
-		for (let i = 0; i < countCards; i++) {
-			let li = document.createElement('li');
-			li.id = i;
-			cardsField.appendChild(li);
-		}
+		fillCards(n);
+		createCards();
 	}
 }
 
@@ -107,7 +99,7 @@ function shuffle(array) {
 		array[currentIndex] = array[randomIndex];
 		array[randomIndex] = temporaryValue;
 	}
-	return array;
+	// return array;
 }
 
 // Handle click event on cards
