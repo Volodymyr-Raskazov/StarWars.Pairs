@@ -31,7 +31,7 @@ body {
 
 .wrapper {
 	min-height: 100%;
-	overflow: hidden;
+	overflow: clip;
 }
 
 .container {
@@ -45,7 +45,7 @@ body {
 	display: flex;
 	align-items: flex-start;
 	gap: 1rem;
-	padding-top: 110px;
+	padding-top: 115px;
 	@media (min-width: 2540px) {
 		padding-top: 288px;
 	}
