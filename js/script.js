@@ -1,5 +1,6 @@
 let cardsField = document.getElementById('cards');
 let resetBlock = document.getElementById('reset');
+let resetOverlay = document.querySelector('.overlay');
 let resetBtn = document.getElementById('reset-btn');
 let lvl1 = document.getElementById('btn-1');
 let lvl2 = document.getElementById('btn-2');
@@ -13,15 +14,14 @@ let x = 4;
 let y = 4;
 let images = [];
 let selCards = [];
-
+console.dir(resetOverlay);
 fillCards(n);
 createCards();
 
 function fillCards(n) {
 	// Push images to array and double them
 	for (let i = 1; i <= n; i += 1) {
-		images.push(i);
-		images.push(i);
+		images.push(i, i);
 	}
 	// Shuffle images
 	shuffle(images);
@@ -40,47 +40,47 @@ function createCards() {
 }
 
 function setLevel(lvl) {
-	if (lvl == 1) {
-		lvl1.classList.add('active');
-		lvl2.classList.remove('active');
-		lvl3.classList.remove('active');
-		countCards = 16;
-		x = 4;
-		y = 4;
-		n = 8;
-		cardsField.innerHTML = '';
-		fillCards(n);
-		createCards();
-	} else if (lvl == 2) {
-		lvl1.classList.remove('active');
-		lvl2.classList.add('active');
-		lvl3.classList.remove('active');
-		cardsField.innerHTML = '';
-		countCards = 36;
-		x = 6;
-		y = 6;
-		n = 18
-		fillCards(n);
-		createCards();
-	} else if (lvl == 3) {
-		lvl1.classList.remove('active');
-		lvl2.classList.remove('active');
-		lvl3.classList.add('active');
-		cardsField.innerHTML = '';
-		countCards = 54;
-		if (window.innerWidth <= 768) {
+	let activeClass = 'active';
+	switch (lvl) {
+		case 1:
+			lvl1.classList.add(activeClass);
+			lvl2.classList.remove(activeClass);
+			lvl3.classList.remove(activeClass);
+			countCards = 16;
+			x = 4;
+			y = 4;
+			n = 8;
+			break;
+		case 2:
+			lvl1.classList.remove(activeClass);
+			lvl2.classList.add(activeClass);
+			lvl3.classList.remove(activeClass);
+			countCards = 36;
 			x = 6;
-			y = 9;
-		} else {
-			x = 9;
 			y = 6;
-		}
-		n = 27
-		fillCards(n);
-		createCards();
+			n = 18
+			break;
+		case 3:
+			lvl1.classList.remove(activeClass);
+			lvl2.classList.remove(activeClass);
+			lvl3.classList.add(activeClass);
+			countCards = 54;
+			if (window.innerWidth <= 768) {
+				x = 6;
+				y = 9;
+			} else {
+				x = 9;
+				y = 6;
+			}
+			n = 27
+			break;
 	}
+	cardsField.innerHTML = '';
 	images = [];
 	cardsField.style.gridTemplate = `repeat(${y}, auto) / repeat(${x}, auto)`;
+	fillCards(n);
+	createCards();
+
 }
 
 function shuffle(array) {
@@ -95,7 +95,6 @@ function shuffle(array) {
 		array[currentIndex] = array[randomIndex];
 		array[randomIndex] = temporaryValue;
 	}
-	// return array;
 }
 
 // Handle click event on cards
@@ -130,6 +129,7 @@ function refreshCards() {
 		cardsField.children[i].style.backgroundImage = 'url("img/back.png")'
 	}
 	if (delCards == countCards) {
+		resetOverlay.style.display = 'block';
 		resetBlock.style.display = 'block';
 	}
 	selCards = [];

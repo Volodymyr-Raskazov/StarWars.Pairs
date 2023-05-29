@@ -34,6 +34,18 @@ body {
 	overflow: clip;
 }
 
+.overlay {
+	position: relative;
+	z-index: 5;
+	background-color: rgba(#251651, 0.5);
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	display: none;
+}
+
 .container {
 	max-width: 81.25rem;
 	margin: 0 auto;
@@ -80,6 +92,7 @@ body {
 		}
 	}
 }
+
 #buttons {
 	display: flex;
 	flex-direction: column;
@@ -129,7 +142,6 @@ body {
 	flex: 1 1 auto;
 	display: grid;
 	grid-template: repeat(4, auto) / repeat(4, auto);
-	// grid-template: repeat(6, auto) / repeat(6, auto);
 	justify-content: center;
 	align-items: center;
 	background: #a2bfd7;
@@ -156,6 +168,8 @@ body {
 }
 
 #reset {
+	position: relative;
+	z-index: 6;
 	background: #fff;
 	border: 0.25rem solid #251651;
 	border-radius: 0.625rem;
