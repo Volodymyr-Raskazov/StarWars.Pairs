@@ -5,7 +5,7 @@ let lvl1 = document.getElementById('btn-1');
 let lvl2 = document.getElementById('btn-2');
 let lvl3 = document.getElementById('btn-3');
 
-let countCards;
+let countCards = 16;
 let delCards = 0;
 let pause = false;
 let n = 8;
@@ -44,11 +44,11 @@ function setLvl(lvl) {
 		lvl1.classList.add('active');
 		lvl2.classList.remove('active');
 		lvl3.classList.remove('active');
-		cardsField.innerHTML = '';
 		countCards = 16;
 		x = 4;
 		y = 4;
 		n = 8;
+		cardsField.innerHTML = '';
 		cardsField.style.gridTemplate = `repeat(${y}, auto) / repeat(${x}, auto)`;
 		images = [];
 		feelCards(n);
@@ -66,7 +66,6 @@ function setLvl(lvl) {
 		images = [];
 		feelCards(n);
 		createCards();
-
 	} else if (lvl == 3) {
 		lvl1.classList.remove('active');
 		lvl2.classList.remove('active');
