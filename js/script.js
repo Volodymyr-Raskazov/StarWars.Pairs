@@ -14,10 +14,10 @@ let y = 4;
 let images = [];
 let selCards = [];
 
-feelCards(n);
+fillCards(n);
 createCards();
 
-function feelCards(n) {
+function fillCards(n) {
 	// Push images to array and double them
 	for (let i = 1; i <= n; i += 1) {
 		images.push(i);
@@ -39,7 +39,7 @@ function createCards() {
 	}
 }
 
-function setLvl(lvl) {
+function setLevel(lvl) {
 	if (lvl == 1) {
 		lvl1.classList.add('active');
 		lvl2.classList.remove('active');
@@ -49,9 +49,7 @@ function setLvl(lvl) {
 		y = 4;
 		n = 8;
 		cardsField.innerHTML = '';
-		cardsField.style.gridTemplate = `repeat(${y}, auto) / repeat(${x}, auto)`;
-		images = [];
-		feelCards(n);
+		fillCards(n);
 		createCards();
 	} else if (lvl == 2) {
 		lvl1.classList.remove('active');
@@ -62,9 +60,7 @@ function setLvl(lvl) {
 		x = 6;
 		y = 6;
 		n = 18
-		cardsField.style.gridTemplate = `repeat(${y}, auto) / repeat(${x}, auto)`;
-		images = [];
-		feelCards(n);
+		fillCards(n);
 		createCards();
 	} else if (lvl == 3) {
 		lvl1.classList.remove('active');
@@ -80,11 +76,11 @@ function setLvl(lvl) {
 			y = 6;
 		}
 		n = 27
-		cardsField.style.gridTemplate = `repeat(${y}, auto) / repeat(${x}, auto)`;
-		images = [];
-		feelCards(n);
+		fillCards(n);
 		createCards();
 	}
+	images = [];
+	cardsField.style.gridTemplate = `repeat(${y}, auto) / repeat(${x}, auto)`;
 }
 
 function shuffle(array) {
