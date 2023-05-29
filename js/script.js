@@ -14,7 +14,7 @@ let x = 4;
 let y = 4;
 let images = [];
 let selCards = [];
-console.dir(resetOverlay);
+
 fillCards(n);
 createCards();
 
