@@ -80,7 +80,6 @@ function setLevel(lvl) {
 	cardsField.style.gridTemplate = `repeat(${y}, auto) / repeat(${x}, auto)`;
 	fillCards(n);
 	createCards();
-
 }
 
 function shuffle(array) {
